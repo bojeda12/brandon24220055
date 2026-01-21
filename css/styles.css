@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/panda.jpg"); /* está bien si la imagen está en css */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-align: center;
+
+    /* Parallax base */
+    background-attachment: fixed;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.info {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.info h2 {
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+
+.info p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+.cards {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 20px 20px 10px;
+    font-size: 1.3rem;
+    color: #2c2c2c;
+}
+
+.card p {
+    margin: 0 20px 25px;
+    color: #555;
+    line-height: 1.5;
+}
+.video-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.video-section h2 {
+    margin-bottom: 30px;
+    color: #2c2c2c;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+/* ===== ANIMACIONES ===== */
+
+/* HEADER */
+.animate-header {
+    opacity: 0;
+    transform: scale(1.1);
+    animation: headerFade 1.5s ease forwards;
+}
+
+@keyframes headerFade {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* SECCIONES */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+

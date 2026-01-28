@@ -6,6 +6,9 @@
     <title>Pandas</title>
     <link rel="icon" href="assets/pandaico.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+
 </head>
 <body>
 
@@ -67,5 +70,6 @@
     </video>
 </section>
 <script src="js/animations.js"></script>
+<script> if ("serviceWorker" in navigator) { navigator.serviceWorker.register("service-worker.js") .then(reg => console.log("Service Worker registrado")) .catch(err => console.error("Error al registrar el Service Worker", err)); } </script>
 </body>
 </html>
